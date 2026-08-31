@@ -22,19 +22,17 @@ from pyspark.sql.types import (
 
 # 1. إعدادات الاتصال بـ Synapse DWH (الـ Dedicated SQL Pool)
 # (استبدل القيم!)
-SYNAPSE_SERVER = "radar-synapse-workspace.sql.azuresynapse.net"  # ⬅️ (اسم السيرفر)
-SYNAPSE_DB = "RadarDW"  # ⬅️ (الاسم الذي اخترته للـ SQL Pool)
-SYNAPSE_USER = "sqladminuser"  # ⬅️(اليوزر الخاص بـ SQL)
-SYNAPSE_PASS = "YourPassword!"  # ⬅️ (كلمة المرور)
+SYNAPSE_SERVER = "radar-synapse-workspace.sql.azuresynapse.net" 
+SYNAPSE_DB = "RadarDW"  
+SYNAPSE_USER = "sqladminuser"  
 
-# هذا السطر يبني "عنوان" الاتصال
+
 SYNAPSE_SQL_URL = f"jdbc:sqlserver://{SYNAPSE_SERVER}:1433;database={SYNAPSE_DB};user={SYNAPSE_USER};password={SYNAPSE_PASS}"
 SYNAPSE_TABLE_OPTIONS = {
     "driver": "com.microsoft.sqlserver.jdbc.SQLServerDriver"
 }
 
 # 2. مسار البيانات الخام (JSON)
-# (هذا المسار يقرأ ملفات .json فقط، كما اتفقنا)
 DATA_LAKE_RAW_PATH = "abfss://radarcont@radardatalake1.dfs.core.windows.net/*.json"
 
 # ----------------------------
