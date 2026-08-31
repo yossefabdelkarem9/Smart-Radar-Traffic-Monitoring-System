@@ -21,7 +21,6 @@ from pyspark.sql.types import (
 # ----------------------------
 
 # 1. إعدادات الاتصال بـ Synapse DWH (الـ Dedicated SQL Pool)
-# (استبدل القيم!)
 SYNAPSE_SERVER = "radar-synapse-workspace.sql.azuresynapse.net" 
 SYNAPSE_DB = "RadarDW"  
 SYNAPSE_USER = "sqladminuser"  
